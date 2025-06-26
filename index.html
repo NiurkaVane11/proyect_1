@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directorio de Inteligencias Artificiales</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">
+          <i class="fas fa-robot"></i>
+          AI Directory
+        </h1>
+        <p class="subtitle">
+          Descubre y compara las mejores herramientas de Inteligencia Artificial
+        </p>
+      </div>
+    </header>
+
+    <!-- BARRA DE BÚSQUEDA Y FILTROS -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar IAs por nombre, categoría o funcionalidad..."
+          />
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active" data-category="all">
+            <i class="fas fa-th"></i>
+            Todas
+          </button>
+          <button class="filter-btn" data-category="text">
+            <i class="fas fa-pen"></i>
+            Texto
+          </button>
+          <button class="filter-btn" data-category="image">
+            <i class="fas fa-image"></i>
+            Imágenes
+          </button>
+          <button class="filter-btn" data-category="code">
+            <i class="fas fa-code"></i>
+            Código
+          </button>
+          <button class="filter-btn" data-category="audio">
+            <i class="fas fa-music"></i>
+            Audio
+          </button>
+          <button class="filter-btn" data-category="video">
+            <i class="fas fa-video"></i>
+            Video
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i class="fas fa-robot"></i>
+            <span class="stat-number" id="totalAIs">0</span>
+            <span class="stat-label">IAs Disponibles</span>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-tags"></i>
+            <span class="stat-number">6</span>
+            <span class="stat-label">Categorías</span>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-star"></i>
+            <span class="stat-number" id="featuredAIs">0</span>
+            <span class="stat-label">Destacadas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <div class="container">
+        <!-- Indicador de resultados -->
+        <div class="results-info">
+          <span id="resultsCount">Cargando IAs...</span>
+        </div>
+
+        <!-- Grid de tarjetas de IA -->
+        <div class="ai-grid" id="aiGrid">
+          <!-- Las tarjetas se generarán dinámicamente con JavaScript -->
+          <div class="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Cargando herramientas de IA...</p>
+          </div>
+        </div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <div class="no-results" id="noResults" style="display: none">
+          <i class="fas fa-search"></i>
+          <h3>No se encontraron resultados</h3>
+          <p>Intenta con otros términos de búsqueda o categorías</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AI Directory</h3>
+            <p>Tu guía completa de herramientas de Inteligencia Artificial</p>
+          </div>
+          <div class="footer-section">
+            <h4>Categorías</h4>
+            <ul>
+              <li><a href="#" data-category="text">Generación de Texto</a></li>
+              <li>
+                <a href="#" data-category="image">Creación de Imágenes</a>
+              </li>
+              <li><a href="#" data-category="code">Asistentes de Código</a></li>
+              <li>
+                <a href="#" data-category="audio">Procesamiento de Audio</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Información</h4>
+            <ul>
+              <li><a href="#">Sobre el proyecto</a></li>
+              <li><a href="#">Contribuir</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 AI Directory. Proyecto educativo de desarrollo frontend.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
